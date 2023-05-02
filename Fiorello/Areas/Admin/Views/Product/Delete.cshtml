@@ -1,0 +1,43 @@
+﻿@model ProductDeleteVM
+
+@{
+    ViewBag.Title = "Delete Product";
+}
+
+<div style="width: 70%; margin-left: 40px">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Image(s)</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @foreach (var item in Model.Images)
+                    {
+                        <img style="width: 300px; height: 150px; border-radius: unset; display: block; margin-bottom: 15px" src="~/img/@item" />
+                    }
+                </td>
+                <td>@Model.Name</td>
+                <td>@Html.Raw(Model.Description)</td>
+                <td>@Model.CategoryName</td>
+                <td>$ @Model.Price</td>
+                <td>@Model.Count</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="text-danger mt-5">Are you sure you want to delete this product?</h2>
+
+    <form method="post" asp-area="Admin" asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id">
+        <button class="btn mt-5" style="color: black; background-color: red" type="submit">Delete</button>
+    </form>
+
+    <a class="btn mt-5" style="color: black; background-color: gray" asp-area="Admin" asp-controller="Product" asp-action="Index">Back</a>
+</div>
