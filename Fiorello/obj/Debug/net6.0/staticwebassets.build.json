@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hIIo0TH2m89Tc/+9IZy+Socd1plO2dv5bOoJ4hSepMs=",
+  "Hash": "Do5NRSknYPciGY7/uznI8OS0mNbXGGdV39zxOl+KaB0=",
   "Source": "Fiorello",
   "BasePath": "_content/Fiorello",
   "Mode": "Default",
@@ -22812,40 +22812,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style.css.map"
-    },
-    {
-      "Identity": "/Users/ali200119/Desktop/Identity_Login_Register_Logout/Fiorello/wwwroot/img/4283f3d3-a9f9-44f6-ad9b-d4ba95c3d110_Marvel's Spider-Man (3).jpeg",
-      "SourceId": "Fiorello",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/ali200119/Desktop/Identity_Login_Register_Logout/Fiorello/wwwroot/",
-      "BasePath": "_content/Fiorello",
-      "RelativePath": "img/4283f3d3-a9f9-44f6-ad9b-d4ba95c3d110_Marvel's Spider-Man (3).jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/img/4283f3d3-a9f9-44f6-ad9b-d4ba95c3d110_Marvel's Spider-Man (3).jpeg"
-    },
-    {
-      "Identity": "/Users/ali200119/Desktop/Identity_Login_Register_Logout/Fiorello/wwwroot/img/ba287c6a-3446-442e-aeee-4d2ce18e6100_Spider-Man Across the Spider-Verse (4).jpeg",
-      "SourceId": "Fiorello",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/ali200119/Desktop/Identity_Login_Register_Logout/Fiorello/wwwroot/",
-      "BasePath": "_content/Fiorello",
-      "RelativePath": "img/ba287c6a-3446-442e-aeee-4d2ce18e6100_Spider-Man Across the Spider-Verse (4).jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/img/ba287c6a-3446-442e-aeee-4d2ce18e6100_Spider-Man Across the Spider-Verse (4).jpeg"
     },
     {
       "Identity": "/Users/ali200119/Desktop/Identity_Login_Register_Logout/Fiorello/wwwroot/img/blog-feature-img-1.jpg",

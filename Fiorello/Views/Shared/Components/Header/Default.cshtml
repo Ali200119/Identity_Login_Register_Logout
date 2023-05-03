@@ -1,4 +1,6 @@
-﻿@model HeaderVM
+﻿@inject UserManager<AppUser> userManager
+
+@model HeaderVM
 
 <header>
     <div class="container">
@@ -95,38 +97,24 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                                <ul class="list-unstyled py-3">
-                                    <li class=""><a class="px-1" href="">Blog 1</a></li>
-                                    <li class=""><a class="px-1" href="">Blog 2</a></li>
-                                    <li class="">
-                                        <a class="px-1 mr-5" href="">Blog 3</a>
-                                        <i class="fas fa-chevron-right fa-sm"></i>
-                                        <ul class="list-unstyled py-3">
-                                            <li class=""><a class="px-3" href="">Blog Layouts 1</a></li>
-                                            <li class=""><a class="px-3" href="">Blog Layouts 2</a></li>
-                                            <li class=""><a class="px-3" href="">Blog Layouts 3</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Elements</a>
-                                <ul class="list-unstyled py-3 elements">
-                                    <li class=""><a class="px-1" href="">Element 1</a></li>
-                                    <li class=""><a class="px-1" href="">Element 2</a></li>
-                                    <li class="element">
-                                        <i class="fas fa-chevron-right fa-sm mr-5"></i>
-                                        <a class="px-1" href="">Element 3</a>
-                                        <ul class="list-unstyled py-3">
-                                            <li class=""><a class="px-3" href="">Element 1</a></li>
-                                            <li class=""><a class="px-3" href="">Element 2</a></li>
-                                            <li class=""><a class="px-3" href="">Element 3</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link logout" style="cursor: pointer">Logout</a>
+                                </li>
+                            }
+
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+                                </li>
+                            }
+
                             <li class="nav-item my-auto search">
                                 <i class="fas fa-search" id="search"></i>
                                 <ul class="list-unstyled py-3">
@@ -279,5 +267,10 @@
             </ul>
         </div>
     </div>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h4 style="position: absolute; top: 15px; right: 15px">@userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name).FullName</h4>
+    }
 
 </header>

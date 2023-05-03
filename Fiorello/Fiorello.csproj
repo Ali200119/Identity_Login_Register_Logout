@@ -38,6 +38,7 @@
     <None Remove="Areas\Admin\Views\SliderInfo\" />
     <None Remove="Areas\Admin\ViewModels\" />
     <None Remove="Areas\Admin\Views\Person\" />
+    <None Remove="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -69,6 +70,7 @@
     <Folder Include="Areas\Admin\Views\SliderInfo\" />
     <Folder Include="Areas\Admin\ViewModels\" />
     <Folder Include="Areas\Admin\Views\Person\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

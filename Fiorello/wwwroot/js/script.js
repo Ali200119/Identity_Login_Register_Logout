@@ -290,4 +290,18 @@ $(document).ready(function () {
             });
         })
     });
+
+    // LOGOUT
+
+    $(document).ready(function () {
+        $(".logout").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Account/Logout",
+                success: function () {
+                    window.location.reload();
+                }
+            })
+        })
+    })
 });
